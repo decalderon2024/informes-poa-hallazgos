@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Acredicom brand palette registered as Tailwind utilities */
+  --color-navy-900: #003a63;
+  --color-navy-800: #0a4066;
+  --color-blue-700: #07598a;
+  --color-cyan-600: #008fa6;
+  --color-teal-500: #0db3b1;
+  --color-teal-600: #0a9a98;
+  --color-green-500: #43b96b;
+  --color-green-600: #369a58;
+
+  --gradient-brand: linear-gradient(90deg, #07598a 0%, #008fa6 55%, #0db3b1 100%);
+  --gradient-panel: linear-gradient(135deg, #124e7d 0%, #008ea4 100%);
+
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --font-sans: 'Poppins', system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+  --background: #f7f8fa;
+  --foreground: #171717;
+  --card: #ffffff;
+  --card-foreground: #171717;
+  --popover: #ffffff;
+  --popover-foreground: #171717;
+  --primary: #07598a;
+  --primary-foreground: #ffffff;
+  --secondary: #eef1f4;
+  --secondary-foreground: #0a4066;
+  --muted: #f2f4f7;
+  --muted-foreground: #647082;
+  --accent: #0db3b1;
+  --accent-foreground: #ffffff;
+  --destructive: #e11d48;
+  --border: #e2e4e8;
+  --input: #e2e4e8;
+  --ring: #0db3b1;
+  --chart-1: #07598a;
+  --chart-2: #008fa6;
+  --chart-3: #0db3b1;
+  --chart-4: #43b96b;
+  --chart-5: #647082;
+  --radius: 0.625rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #171717;
+  --sidebar-primary: #07598a;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #eef6f6;
+  --sidebar-accent-foreground: #0a4066;
+  --sidebar-border: #e2e4e8;
+  --sidebar-ring: #0db3b1;
+}
+
+.dark {
+  color-scheme: dark;
+  --background: #061a2b;
+  --foreground: #eef3f7;
+  --card: #0b2740;
+  --card-foreground: #eef3f7;
+  --popover: #0b2740;
+  --popover-foreground: #eef3f7;
+  --primary: #0db3b1;
+  --primary-foreground: #04222f;
+  --secondary: #123353;
+  --secondary-foreground: #dce8f2;
+  --muted: #0f2c47;
+  --muted-foreground: #8fa6bb;
+  --accent: #0db3b1;
+  --accent-foreground: #04222f;
+  --destructive: #fb7185;
+  --border: #1c3f5f;
+  --input: #1c3f5f;
+  --ring: #0db3b1;
+  --chart-1: #3aa0d4;
+  --chart-2: #22b6c4;
+  --chart-3: #0db3b1;
+  --chart-4: #43b96b;
+  --chart-5: #8fa6bb;
+  --sidebar: #081f33;
+  --sidebar-foreground: #eef3f7;
+  --sidebar-primary: #0db3b1;
+  --sidebar-primary-foreground: #04222f;
+  --sidebar-accent: #123353;
+  --sidebar-accent-foreground: #dce8f2;
+  --sidebar-border: #1c3f5f;
+  --sidebar-ring: #0db3b1;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', system-ui, sans-serif;
+  }
+  h1 {
+    @apply text-2xl font-bold leading-tight;
+  }
+  h2 {
+    @apply text-lg font-bold leading-tight;
+  }
+  h3 {
+    @apply text-base font-semibold leading-snug;
+  }
+}
